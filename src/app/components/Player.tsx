@@ -27,17 +27,17 @@ export const Player: FC<PlayerProps> = ({ url, data }) => {
   }
 	return (
 		<>
-			<div className={hstack({justifyContent: "center"})}>
+			<div className={hstack({justifyContent: "center", mt: "20px", fontWeight: "bold"})}>
 				{data.map((item, i) => (
-					<div key={i} onClick={()=>handleClick(item.title)}>{item.title}</div>
+					<div key={i} onClick={()=>handleClick(item.title)} className={css({padding: "10px", borderRadius: "15px",backgroundColor: "#E8EAED", shadow: "md", cursor: "pointer", _hover: {opacity: "0.7"}})}>{item.title}</div>
 				))}
 			</div>
 			{data.map((item, i)=>(
-			 <div key={i} className={css({maxWidth: "90vw", margin: "0 auto"})}>
+			 <div key={i} className={css({width: "90vw", margin: "0 auto"})}>
 					{item.title === currentTitle && 
 						item.url.map((url, j)=>(
-							<div key={j} className={css({margin: "20px"})}>
-								{hasWindow && <ReactPlayer url={url} width={"100%"} />}
+							<div key={j} className={css({margin: "20px", borderRadius: "10px"})}>
+								{hasWindow && <ReactPlayer url={url} width={"100%"} style={{borderRadius: "20px", overflow: "hidden"}}/>}
 							</div>
 						))
 					}
