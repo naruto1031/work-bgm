@@ -30,7 +30,7 @@ export default function Page() {
     {
       title: "カフェ",
       url: [
-        "https://www.youtube.com/watch?v=OLl8ZgqCZyo","https://www.youtube.com/watch?v=cK4LemjoFd0", "https://www.youtube.com/watch?v=3Pzh3sFxdDI"
+        "https://www.youtube.com/watch?v=OLl8ZgqCZyo","https://www.youtube.com/watch?v=cK4LemjoFd0"
       ]
     }
   ]
